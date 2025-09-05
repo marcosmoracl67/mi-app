@@ -1,0 +1,10 @@
+/*Punto de entrada: importa todo lo anterior*/
+@import "./base.css";
+@import "./themes.css";
+@import "./layout.css";
+@import "./forms.css";
+@import "./components.css";
+@import "./sidebar.css";
+@import "./tables.css";
+@import "./proyect.css"
+@import "./newStyles.css"

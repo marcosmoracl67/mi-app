@@ -1,0 +1,1188 @@
+/*Botones, inputs, tarjetas, modales*/
+.login-button {
+    background-color: var(--button-base);
+    color: var(--button-txt);
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .login-button:hover {
+    background-color: var(--button-action);
+  }
+  
+  .login-title {
+    text-align: center;
+    color: var(--txt-color);
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+  }
+  
+  /* Modal */
+  
+
+  .modal-content.modal-form {
+    background-color: var(--background2);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+    margin: 0 auto; /* <--- asegúrate de esto */
+
+  }
+  
+  
+  .modal-dialog {
+    margin-top: 0rem;
+    background-color: #5c5c99;
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    min-width: 340px;
+    max-width: 95%;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    color: var(--txt-color);
+    margin: 0rem;
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+  
+  .modal-parraf {
+    font-size: 1rem;
+    color: var(--txt-color);
+    margin-bottom: 0.5rem;
+  }
+  
+ /*  .modal-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  } */
+  
+  .modal-button {
+    background-color: var(--button-base);
+    color: var(--button-txt);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .modal-button:hover {
+    background-color: var(--button-action);
+  }
+  
+  .modal-button.cancel {
+    background-color: var(--disable);
+    color: var(--txt-color);
+  }
+  .modal-button.cancel:hover {
+    background-color: var(--input-stroke-idle);
+  }
+  
+  /* UserCard */
+  .user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background2);
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    gap: 0.7rem;
+  }
+  
+  .user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--disable);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-name {
+    font-size: 1rem;
+    color: var(--txt-color);
+    text-align: center;
+    word-break: break-word;
+    font-weight: bold;
+  }
+  
+  .user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.4rem;
+  }
+  
+  .user-action-button {
+    background-color: var(--button-base);
+    color: var(--button-txt);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-action-button:hover {
+    background-color: var(--button-focus);
+  }
+  
+  .notification-toast {
+    background-color: var(--highlight);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  }
+  
+ /*  .form-button {
+    background-color: var(--button-base);
+    font-size: 1rem;
+    color: var(--button-txt);
+    padding: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  } */
+
+  .form-button {
+    background-color: var(--button-base);
+    font-size: 1rem; /* <-- AJUSTE CLAVE */
+    color: var(--button-txt);
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: fit-content;
+  }
+  
+  
+  .form-button:hover {
+    background-color: var(--button-action);
+  }
+  
+  .form-button.small {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+  }
+
+
+  
+  .form-button.square {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  
+  .form-button.danger {
+    background-color: #b00020;
+    color: #fff;
+  }
+  
+  .form-button.danger:hover {
+    background-color: #8c0018;
+  }
+  
+  .form-button.subtle {
+    background-color: transparent;
+    color: var(--txt-color);
+    border: 1px solid var(--disable);
+  }
+  
+  .form-button.subtle:hover {
+    background-color: var(--highlight-nav);
+  }
+  
+  .modal-content.confirm-dialog {
+    background-color: var(--modal-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .confirm-message h2 {
+    font-size: 1.5rem;
+    color: var(--txt-color);
+    margin-bottom: 1rem;
+  }
+  
+  .confirm-message p {
+    color: var(--txt-color);
+  }
+  
+  .modal-actions.spaced {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+
+  /* Seacrh */
+  
+  .search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem 0 0;
+    width: 80%;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-stroke-idle);
+    background-color: var(--input-bg);
+    height: 2rem; /* <= reduce altura total */
+    border-radius: 6px;
+    padding: 0 0.5rem;
+    width: 100%;
+    max-width: 100% !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 0rem;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: var(--txt-input-color);
+    outline: none;
+    padding-top: 0rem;
+    padding-top: 0rem;
+    font-size: 0.9rem;
+  }
+
+  .search-icon {
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem !important;
+  }
+  
+  .search-bar svg {
+    color: var(--txt-input-color);
+    font-size: 1rem;
+  }
+  
+  .form-button.add-button {
+    padding: 0.8rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    background-color: var(--button-base);
+    color: var(--button-txt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.8rem;
+  }
+  
+  .icon-plus {
+    font-size: 0.8rem;
+  }
+
+  /* Toggle */
+
+.form-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  color: var(--txt-color);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--disable);
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  background-color: var(--button-txt);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: var(--highlight);
+}
+
+input:checked + .slider::before {
+  transform: translateX(var(--circle-shift));
+}
+
+/* Tamaños */
+.switch--small {
+  width: 32px;
+  height: 16px;
+}
+.switch--small .slider {
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.switch--small .slider::before {
+  width: 12px;
+  height: 12px;
+  left: 2px;
+  bottom: 2px;
+}
+.switch--small input:checked + .slider::before {
+  --circle-shift: 16px;
+}
+
+.switch--medium {
+  width: 40px;
+  height: 22px;
+}
+.switch--medium .slider {
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.switch--medium .slider::before {
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  bottom: 3px;
+}
+.switch--medium input:checked + .slider::before {
+  --circle-shift: 18px;
+}
+
+.switch--large {
+  width: 52px;
+  height: 28px;
+}
+.switch--large .slider {
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.switch--large .slider::before {
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  bottom: 3px;
+}
+.switch--large input:checked + .slider::before {
+  --circle-shift: 24px;
+}
+
+
+***************************
+
+.modal-dialog h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-dialog p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.modal-dialog .form-input {
+  width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #2c2c55;
+  color: white;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-icon {
+  display: inline-flex;
+  margin-right: 0.5rem;
+}
+
+.btn-label {
+  display: inline-block;
+}
+
+.btn-align-left {
+  justify-content: flex-start;
+}
+.btn-align-center {
+  justify-content: center;
+}
+.btn-align-right {
+  justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.document-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.document-table th,
+.document-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+
+.form-button.small {
+  padding: 0.3rem 1rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  width: auto;
+}
+
+/* .upload-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+} */
+
+.upload-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: auto;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.upload-row input[type="file"] {
+  max-width: auto;
+}
+
+.form-button {
+  flex: 0 0 auto !important;
+}
+
+.upload-row input[type="file"] {
+  max-width: auto;
+  flex: 0 0 auto;
+}
+
+/*  container  */
+
+.container {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.container.bordered {
+  border: 1px solid #ccc;
+}
+
+.container.animated {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: var(--background1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.spinner {
+  margin: 2rem auto;
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--color-light);
+  border-top: 6px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* Loader */
+
+/* src/components/Loader.css */
+
+/* Contenedor opcional si necesitas centrar o añadir texto */
+.loader-container {
+  display: inline-flex; /* Por defecto, para que el texto quede al lado si no es bloque */
+  flex-direction: column; /* Apila spinner y texto */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente si tiene alto definido */
+  gap: 0.5rem; /* Espacio entre spinner y texto */
+}
+
+/* Estilo base del Loader */
+.loader {
+  border: 4px solid var(--loader-background, rgba(128, 128, 128, 0.2)); /* Gris claro/transparente como base */
+  border-top-color: var(--primary); /* Color primario del tema para la parte activa */
+  border-radius: 50%;
+  display: inline-block; /* Permite que esté en línea con otros elementos si es necesario */
+  box-sizing: border-box; /* Asegura que el borde no aumente el tamaño total */
+
+  /* Animación */
+  animation: spin 1s linear infinite;
+}
+
+/* Texto opcional asociado */
+.loader-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary); /* Color secundario del tema */
+  margin-top: 0.5rem; /* Espacio superior si está debajo */
+}
+
+/* Tamaños */
+.loader-small {
+  width: 20px;
+  height: 20px;
+  border-width: 3px; /* Borde más fino para tamaño pequeño */
+}
+
+.loader-medium {
+  width: 40px;
+  height: 40px;
+  border-width: 4px; /* Default */
+}
+
+.loader-large {
+  width: 60px;
+  height: 60px;
+  border-width: 5px; /* Borde más grueso */
+}
+
+/* Animación de rotación */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Clase para ocultar texto visualmente pero mantenerlo para lectores de pantalla */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+  border: 0;
+}
+
+/* --- Modal Styles --- */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--modal-overlay-bg, rgba(0, 0, 0, 0.6)); /* Fondo semi-transparente */
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+  display: flex; /* Facilitar centrado si fuera necesario, aunque el modal se posiciona */
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado clásico */
+  background-color: var(--modal-bg, var(--background2)); /* Fondo del modal */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001; /* Encima del overlay */
+  max-height: 90vh; /* Altura máxima */
+  display: flex;
+  flex-direction: column; /* Estructura vertical: título, cuerpo, (acciones opcionales) */
+  overflow: hidden; /* Para controlar el scroll del body */
+  padding: 1.5rem; /* Padding general interno */
+  color: var(--txt-color); /* Color de texto por defecto */
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem; /* Tamaño del icono */
+  cursor: pointer;
+  color: var(--txt-disabled); /* Color del icono */
+  padding: 0.2rem;
+  line-height: 1; /* Ajuste para alinear mejor el icono */
+}
+
+.custom-modal-close:hover {
+  color: var(--txt-color); /* Color al pasar el mouse */
+}
+
+.custom-modal-title {
+  font-size: 1.5rem; /* Tamaño del título */
+  font-weight: 600;
+  margin: 0 0 1rem 0; /* Margen inferior */
+  padding-right: 2rem; /* Espacio para que no se solape con el botón de cierre */
+  color: var(--txt-highlighted, var(--primary)); /* Color del título */
+  text-align: left; /* O center, según preferencia */
+}
+
+.custom-modal-body {
+  flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
+  overflow-y: auto; /* Scroll si el contenido es muy largo */
+  padding-top: 0.5rem; /* Espacio sobre el contenido */
+  text-align: left; /* O center, según preferencia */
+}
+
+/* Ajustes opcionales para diferentes tamaños de pantalla */
+@media (max-width: 600px) {
+  .custom-modal {
+    width: 90% !important; /* Usa !important con cuidado, o ajusta la prop 'width' */
+    max-width: none;
+  }
+  .custom-modal-title {
+    font-size: 1.3rem;
+  }
+}
+/* --- END OF FILE styles/Modal.css --- */
+
+/* --- Aditional to confirm-dialog --- */
+
+.confirm-dialog-body {
+  /* Puedes añadir padding o estilos específicos si es necesario */
+  text-align: center; /* Centrar texto y botones es común en confirmaciones */
+}
+
+.confirm-dialog-message {
+  margin-bottom: 1.5rem; /* Espacio entre mensaje y botones */
+  font-size: 1rem;
+  color: var(--txt-color);
+  line-height: 1.5;
+}
+
+.confirm-dialog-actions.modal-actions.spaced {
+  margin-top: 1rem; /* Espacio sobre los botones si hay mensaje */
+  justify-content: center; /* Centrar los botones */
+}
+
+/* --- styles login --- */
+
+.login-error-modal-body {
+  /* Puedes añadir padding específico si el padding general de .custom-modal-body no es suficiente */
+}
+
+.modal-message-content {
+  margin-bottom: 1.5rem; /* Espacio entre el mensaje y el botón */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--txt-color);
+  text-align: center; /* Centrar texto en este modal específico */
+}
+
+/* Estilo para el enlace dentro del mensaje del modal */
+.modal-link {
+  color: var(--highlight); /* Usar color de resaltado del tema */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.modal-link:hover {
+  color: var(--button-action); /* Oscurecer un poco al pasar el mouse */
+}
+
+/* Clase genérica para centrar acciones en modales si no la tienes */
+.modal-actions.centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estructura básica del grupo de formulario (puede que ya la tengas) */
+.form-group {
+  margin-bottom: 1rem; /* Espacio entre campos */
+  
+  display: flex;       /* Para control de layout si es necesario */
+  flex-direction: column; /* Por defecto: etiqueta encima del input */
+  width: 100%;        /* Ocupa el ancho disponible por defecto */
+}
+
+/* Estilo de la etiqueta (puede que ya la tengas) */
+.form-label {
+  display: block; /* Asegura que esté en su propia línea */
+  margin-bottom: 0.4rem; /* Espacio entre etiqueta e input */
+  font-size: 0.9rem;
+  font-weight: 500; /* O 600 si prefieres más énfasis */
+  color: var(--txt-color);
+  text-align: left; /* Asegura alineación izquierda */
+}
+
+/* Indicador visual opcional para campos requeridos */
+.required-indicator {
+  color: var(--danger, #b00020); /* O el color que prefieras para indicar requerido */
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+/* Estilo base del input (puede que ya lo tengas) */
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.8rem; /* Ajusta el padding según tu diseño */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--txt-input-color);
+  background-color: var(--input-bg);
+  background-clip: padding-box;
+  border: 1px solid var(--input-stroke-idle);
+  border-radius: 6px; /* O el borde que uses */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-sizing: border-box; /* Importante */
+}
+
+.form-input:focus {
+  border-color: var(--input-stroke-focus);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(var(--input-stroke-focus-rgb), 0.25); /* Opcional: Sombra de foco */
+  /* Necesitarás definir --input-stroke-focus-rgb si usas la sombra, ej: 156, 39, 176 */
+}
+
+.form-input::placeholder {
+  color: var(--txt-disabled);
+  opacity: 1;
+}
+
+.form-input:disabled,
+.form-input[readonly] {
+  background-color: var(--disable);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* --- ESTILOS PARA EL ESTADO DE ERROR --- */
+
+/* Clase para inputs inválidos */
+.form-input.is-invalid {
+  border-color: var(--danger, #dc3545); /* Rojo para el borde */
+  /* Opcional: Añadir un icono de error dentro del input si el diseño lo requiere */
+}
+
+.form-input.is-invalid:focus {
+  border-color: var(--danger, #dc3545);
+  box-shadow: 0 0 0 0.2rem rgba(var(--danger-rgb, 220, 53, 69), 0.25); /* Sombra roja al hacer foco */
+  /* Necesitarás definir --danger-rgb si usas la sombra, ej: 220, 53, 69 */
+}
+
+/* Estilo para el mensaje de error */
+.form-error-message {
+  width: 100%;
+  margin-top: 0.3rem; /* Espacio entre input y mensaje */
+  font-size: 0.85rem;
+  color: var(--danger, #dc3545); /* Color rojo para el texto */
+  text-align: left; /* Asegura alineación */
+}
+/* --- DENTRO de forms.css o similar --- */
+
+.form-select {
+  /* Hereda la mayoría de los estilos de .form-input */
+  /* Puedes añadir o sobrescribir estilos específicos aquí */
+  appearance: none; /* Quita la apariencia nativa del sistema operativo */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%236c757d' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  padding-right: 2.5rem; /* Asegúrate de que este padding sea suficiente */
+}
+
+/* Estilo específico para selects deshabilitados si es necesario (además de .form-input:disabled) */
+.form-select:disabled {
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"); /* Flecha gris para deshabilitado (ajusta color %23adb5bd) */
+}
+
+/* Estilo para el estado inválido si es necesario (además de .is-invalid en .form-input) */
+.form-select.is-invalid {
+  /* --- Flecha para inválido (Rojo #dc3545) --- */
+  /* Color inválido: %23dc3545 (probablemente ya estaba bien) */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dc3545' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Ocultar flecha en IE (si necesitas soportarlo) */
+select.form-select::-ms-expand {
+  display: none;
+}
+
+.form-input {
+  padding: 0.6rem 0.8rem; /* Padding base */
+  font-size:0.9rem;         /* Tamaño de fuente base */
+  line-height: 1.2;        /* Altura de línea base */
+}
+
+.form-select {  /*Tamaño letra select*/
+  line-height: 1.2rem; 
+  font-size: 0.9rem; 
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;  
+}
+
+/* --- Estilo de botones --- */
+
+/* Contenedor del contenido normal del botón */
+.form-button__content {
+  display: inline-flex; /* Asegura que icono y label se alineen bien */
+  align-items: center;
+  gap: 0.5em; /* Espacio entre icono y label (ajusta si es necesario) */
+  /* La visibilidad se controla inline */
+}
+
+/* Contenedor del loader */
+.form-button__loader {
+  /* Para centrar el loader si NO usas position:absolute en el Loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Opcional: Para centrado absoluto del Loader (requiere position:relative en el button) */
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
+
+/* Estilo opcional para el botón cuando está cargando */
+.form-button--loading {
+  cursor: wait; /* Cambia el cursor */
+  /* opacity: 0.8; */ /* Opcional: ligera opacidad */
+}
+
+/* Toggle switch */
+
+/* Asegúrate que .form-group tenga el margin-bottom deseado */
+.form-group {
+  margin-bottom: 1rem; /* O el valor que estés usando */
+  /* ... otros estilos base ... */
+}
+
+/* Contenedor interno para alinear label y switch */
+.form-toggle-inner {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el texto y el switch */
+  gap: 0.8rem; /* Espacio entre el texto y el switch */
+  /* Quita el flex-direction: column; si .form-group lo tiene y quieres layout horizontal */
+}
+
+/* Ajustes al label de texto si es necesario */
+.form-label.switch-label {
+  margin-bottom: 0; /* Quitar margen inferior si está inline con el switch */
+  flex-shrink: 0; /* Evita que el label se encoja si no hay espacio */
+}
+
+/* Estilos para el switch (pueden estar en components.css) */
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; /* Ayuda a la alineación si no se usa flex */
+}
+/* ... (tus estilos existentes para .switch input, .slider, .slider::before, tamaños) ... */
+
+
+/* --- NUEVO: Estilos para estado deshabilitado --- */
+.form-group--disabled .form-toggle-inner {
+   opacity: 0.6; /* Atenuar todo el grupo */
+   cursor: not-allowed;
+}
+/* Opcional: estilizar específicamente el switch cuando está deshabilitado */
+.form-group--disabled .switch {
+   cursor: not-allowed;
+}
+/* (El input checkbox nativo ya debería tener estilos :disabled por defecto) */
+
+
+/* --- NUEVO: Estilos opcionales para estado de error en el grupo --- */
+.form-group--error .form-label.switch-label {
+   /* color: var(--danger); */ /* Opcional: Poner label en rojo */
+}
+.form-group--error .switch .slider {
+   /* border: 1px solid var(--danger); */ /* Opcional: Borde rojo en el slider */
+}
+
+/* Mensaje de error (usa la clase estándar) */
+.form-error-message {
+  width: 100%;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--danger, #dc3545);
+  /* Añadir padding-left si el error debe alinearse con el switch y no con la etiqueta */
+  /* padding-left: calc(LABEL_WIDTH + GAP); */ /* Calcular según tu layout */
+}
+
+/* --- Añadir Estilos a CheckBox --- */
+
+/* Contenedor interno para alinear */
+.form-checkbox-inner {
+  display: flex;
+  align-items: center; /* Alinea verticalmente caja y texto */
+  gap: 0.6rem; /* Espacio entre caja y texto */
+  cursor: pointer; /* Indicar que toda la zona es clickeable (por los labels) */
+}
+
+/* Ocultar el input real pero mantenerlo accesible */
+.form-checkbox__input--hidden {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+/* Estilo de la caja visual */
+.form-checkbox__visual {
+  display: inline-flex; /* Para contener el icono */
+  justify-content: center;
+  align-items: center;
+  width: 1.1rem;  /* Tamaño de la caja */
+  height: 1.1rem; /* Tamaño de la caja */
+  border: 2px solid var(--input-stroke-idle, #a398b2); /* Borde */
+  border-radius: 3px; /* Bordes ligeramente redondeados */
+  background-color: var(--input-bg, #b5b4b7); /* Fondo */
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+  flex-shrink: 0; /* Evitar que se encoja */
+}
+
+/* Estilo del icono checkmark (oculto por defecto) */
+.form-checkbox__checkmark {
+  display: block; /* Necesario para transform */
+  color: var(--button-txt, #ffffff); /* Color del checkmark */
+  font-size: 0.8rem; /* Tamaño del checkmark */
+  opacity: 0; /* Oculto por defecto */
+  transform: scale(0.5); /* Empieza pequeño */
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* --- ESTADOS --- */
+
+/* Cuando el input real está :checked */
+.form-checkbox__input--hidden:checked + .form-checkbox__visual {
+  background-color: var(--highlight, #9055a2); /* Fondo cuando está checked */
+  border-color: var(--highlight, #9055a2);     /* Borde cuando está checked */
+}
+
+/* Mostrar el checkmark cuando está checked */
+.form-checkbox__input--hidden:checked + .form-checkbox__visual .form-checkbox__checkmark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Estilo al hacer foco (aplicado al input real, se refleja en el visual) */
+.form-checkbox__input--hidden:focus + .form-checkbox__visual {
+  outline: none; /* Quitar outline nativo */
+  box-shadow: 0 0 0 0.2rem rgba(var(--input-stroke-focus-rgb, 156, 39, 176), 0.35); /* Sombra de foco */
+  border-color: var(--input-stroke-focus, #9c27b0);
+}
+
+/* Estado deshabilitado (aplicado al grupo) */
+.form-group--checkbox.form-group--disabled .form-checkbox-inner {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* Opcional: Estilos específicos para el visual deshabilitado */
+.form-checkbox__visual.form-checkbox--disabled {
+   background-color: var(--disable);
+   border-color: var(--disable);
+}
+
+/* Estado de error (aplicado al grupo y al visual) */
+.form-checkbox__visual.form-checkbox--error {
+   border-color: var(--danger, #dc3545);
+}
+/* El mensaje de error usa .form-error-message estándar */
+
+
+/* Ajuste del label de texto */
+.form-label.checkbox-label {
+  margin-bottom: 0; /* Quitar margen inferior ya que está inline */
+  cursor: pointer;
+}
+
+/* Opcional: Para centrar/alinear mejor los botones en la columna */
+.actions-column .table-actions {
+  justify-content: center; /* o flex-start, flex-end */
+}
+
+/* --- styles radio-group   --- */
+
+/* Estilo base para el grupo de radios */
+.form-radio-group {
+  /* Hereda margen de .form-group */
+  border: none; /* Quita el borde por defecto de fieldset si no se quiere */
+  padding: 0; /* Quita padding por defecto de fieldset */
+}
+
+/* Estilo para la leyenda (usa .form-label) */
+.form-radio-group legend.form-label {
+  margin-bottom: 0.6rem; /* Espacio debajo de la leyenda */
+  padding: 0; /* Asegurar que no tenga padding extraño */
+}
+
+/* Contenedor de las opciones */
+.form-radio-options-wrapper {
+  display: flex;
+  flex-direction: column; /* Layout vertical por defecto */
+  gap: 0.5rem; /* Espacio entre opciones verticales */
+}
+
+/* Layout horizontal */
+.form-radio-group--inline .form-radio-options-wrapper {
+  flex-direction: row; /* Cambia a horizontal */
+  flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+  gap: 1.5rem; /* Espacio mayor entre opciones horizontales */
+}
+
+/* Estilo para cada item (input + label) */
+.form-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre el radio y su label */
+}
+
+/* Input de radio (estilos nativos por ahora) */
+.form-radio__input {
+  margin: 0; /* Resetear margen */
+  flex-shrink: 0; /* Evitar que se encoja */
+  /* Podrías añadir tamaño/cursor aquí si los nativos no son consistentes */
+  cursor: pointer;
+}
+.form-radio__input:disabled {
+  cursor: not-allowed;
+}
+
+/* Label del radio */
+.form-radio-label {
+  margin-bottom: 0; /* Quitar margen si viene de .form-label general */
+  font-weight: normal; /* Peso normal para labels de opciones */
+  cursor: pointer;
+  /* Color podría ser slightly diferente si se desea */
+  /* color: var(--txt-color-secondary); */
+}
+.form-radio-group--disabled .form-radio-label {
+   cursor: not-allowed;
+}
+
+
+/* Estado deshabilitado para el grupo */
+.form-radio-group--disabled {
+  opacity: 0.6;
+}
+/* (El atributo disabled en fieldset/input ya debería funcionar,
+   pero la opacidad ayuda visualmente) */
+
+
+/* Mensaje de error (usa la clase estándar .form-error-message) */
+.form-group--error .form-error-message {
+   /* Ajusta el margen superior si es necesario para separarlo de las opciones */
+   margin-top: 0.5rem;
+}

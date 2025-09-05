@@ -1,0 +1,96 @@
+/* --- Modal Styles --- */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--modal-overlay-bg, rgba(0, 0, 0, 0.6)); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    display: flex; /* Facilitar centrado si fuera necesario, aunque el modal se posiciona */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado clásico */
+    background-color: var(--modal-bg, var(--background2)); /* Fondo del modal */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001; /* Encima del overlay */
+    max-height: 90vh; /* Altura máxima */
+    display: flex;
+    flex-direction: column; /* Estructura vertical: título, cuerpo, (acciones opcionales) */
+    overflow: hidden; /* Para controlar el scroll del body */
+    padding: 1.5rem; /* Padding general interno */
+    color: var(--txt-color); /* Color de texto por defecto */
+  }
+  
+  .custom-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* Tamaño del icono */
+    cursor: pointer;
+    color: var(--txt-disabled); /* Color del icono */
+    padding: 0.2rem;
+    line-height: 1; /* Ajuste para alinear mejor el icono */
+  }
+  
+  .custom-modal-close:hover {
+    color: var(--txt-color); /* Color al pasar el mouse */
+  }
+  
+  .custom-modal-title {
+    font-size: 1.5rem; /* Tamaño del título */
+    font-weight: 600;
+    margin: 0 0 1rem 0; /* Margen inferior */
+    padding-right: 2rem; /* Espacio para que no se solape con el botón de cierre */
+    color: var(--txt-highlighted, var(--primary)); /* Color del título */
+    text-align: left; /* O center, según preferencia */
+  }
+  
+  .custom-modal-body {
+    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
+    overflow-y: auto; /* Scroll si el contenido es muy largo */
+    padding-top: 0.5rem; /* Espacio sobre el contenido */
+    text-align: left; /* O center, según preferencia */
+  }
+  
+  /* Ajustes opcionales para diferentes tamaños de pantalla */
+  @media (max-width: 600px) {
+    .custom-modal {
+      width: 90% !important; /* Usa !important con cuidado, o ajusta la prop 'width' */
+      max-width: none;
+    }
+    .custom-modal-title {
+      font-size: 1.3rem;
+    }
+  }
+  /* --- END OF FILE styles/Modal.css --- */
+
+  /* --- Aditional to confirm-dialog --- */
+
+.confirm-dialog-body {
+    /* Puedes añadir padding o estilos específicos si es necesario */
+    text-align: center; /* Centrar texto y botones es común en confirmaciones */
+  }
+  
+  .confirm-dialog-message {
+    margin-bottom: 1.5rem; /* Espacio entre mensaje y botones */
+    font-size: 1rem;
+    color: var(--txt-color);
+    line-height: 1.5;
+  }
+  
+  .confirm-dialog-actions.modal-actions.spaced {
+    margin-top: 1rem; /* Espacio sobre los botones si hay mensaje */
+    justify-content: center; /* Centrar los botones */
+  }
+  
+  /* --- Fin de añadidos --- */

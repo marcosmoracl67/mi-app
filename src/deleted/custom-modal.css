@@ -1,0 +1,50 @@
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--modal-overlay-bg);
+    z-index: 1000;
+  }
+  
+  .custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background1); /* o cualquier color que quieras para el fondo del modal */
+    border-radius: 8px;
+    padding: 2rem;
+    z-index: 1001;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding-top: 0rem;
+  }
+  
+  .custom-modal-title {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+  }
+  
+  .custom-modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .custom-modal-close:hover {
+    color: #c00;
+  }
+  
+  
+  
+  

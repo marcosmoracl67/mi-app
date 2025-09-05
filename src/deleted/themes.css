@@ -1,0 +1,47 @@
+/*Claro / oscuro, variables CSS*/
+:root[data-theme='light'] {
+  --background1: #dddbdb;
+  --background2: #faf7f5;
+  --highlight: #9055a2;
+  --disable: #d6d6d6;
+  --txt-color: #1f1b24;
+  --txt-highlighted: #9055a2;
+  --txt-disabled: #9a9a9a;
+  --input-bg: #b5b4b7;
+  --input-stroke-focus: #9c27b0;
+  --input-stroke-idle: #a398b2;
+  --txt-input-color: #2c1b3b;
+  --button-base: #861098;
+  --button-focus: #ba68c8;
+  --button-action: #6a1b9a;
+  --button-txt: #ffffff;
+  --button-hover: rgba(255, 255, 255, 0.1);
+  --highlight-nav: #c6bada;
+  --sidebar-bg: #eee9ee;
+  --modal-bg: var(--background2); /* <<< CAMBIADO - Ahora usa un color sólido */
+  --modal-overlay-bg: rgb(50, 50, 50, 0.9); /* El overlay sí debe ser translúcido */
+  }
+  
+  :root[data-theme='dark'] {
+    --background1: #0a0e2a;
+    --background2: #0d164d;
+    --background3: #212d79;
+    --highlight: #a66cff;
+    --disable: #3a3d56;
+    --txt-color: #ffffff;
+    --txt-highlighted: #ffffff;
+    --txt-disabled: #9093af;
+    --input-bg: #262a4a;
+    --input-stroke-focus: #ba68c8;
+    --input-stroke-idle: #4f5473;
+    --txt-input-color: #fafafa;
+    --button-base: #37196a;
+    --button-focus: #9575cd;
+    --button-action: #512da8;
+    --button-txt: #ffffff;
+    --button-hover: rgba(255, 255, 255, 0.1);
+    --highlight-nav: #caa7ff;
+    --sidebar-bg: #0b1020;
+    --modal-bg: var(--background2); /* <<< CAMBIADO - Ahora usa un color sólido */
+    --modal-overlay-bg: rgb(50, 50, 50, 0.9);
+  }
