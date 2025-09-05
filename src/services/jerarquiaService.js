@@ -1,7 +1,6 @@
 // src/services/jerarquiaService.js
-
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
-
+import { API_BASE_URL } from '../config.js';
+const API_URL = `${API_BASE_URL}/api`;
 
 const getAuthHeaders = () => ({
     'Content-Type': 'application/json',
@@ -16,7 +15,7 @@ const getAuthHeaders = () => ({
  * @returns {Promise<Array<Object>>} Lista plana de nodos ordenada por LFT.
  */
 export const obtenerJerarquiaCompleta = async () => {
-    const response = await fetch(`${API_BASE_URL}/jerarquia`, {
+    const response = await fetch(`${API_URL}/jerarquia`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include', // Esencial para enviar cookies (como el JWT de sesión)
@@ -35,7 +34,7 @@ export const obtenerJerarquiaCompleta = async () => {
  * @returns {Promise<Array<Object>>} Lista plana de nodos hijos.
  */
 export const obtenerSubarbol = async (idNodoRaiz) => {
-    const response = await fetch(`${API_BASE_URL}/jerarquia/${idNodoRaiz}/subtree`, {
+     const response = await fetch(`${API_URL}/jerarquia/${idNodoRaiz}/subtree`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -55,7 +54,7 @@ export const obtenerSubarbol = async (idNodoRaiz) => {
  */
 export const crearNodo = async (datosNuevoNodo) => {
     console.log("[SERVICE] crearNodo - Enviando payload:", datosNuevoNodo); // Buen log para ver qué se envía
-    const response = await fetch(`${API_BASE_URL}/jerarquia`, {
+    const response = await fetch(`${API_URL}/jerarquia`, {
         method: 'POST',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -76,7 +75,7 @@ export const crearNodo = async (datosNuevoNodo) => {
  * @returns {Promise<Object>} Respuesta del servidor.
  */
 export const renombrarNodo = async (idNodo, nuevaDescripcion) => {
-    const response = await fetch(`${API_BASE_URL}/jerarquia/${idNodo}`, {
+     const response = await fetch(`${API_URL}/jerarquia/${idNodo}`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -96,7 +95,7 @@ export const renombrarNodo = async (idNodo, nuevaDescripcion) => {
  * @returns {Promise<Object>} Respuesta del servidor.
  */
 export const eliminarNodo = async (idNodo) => {
-    const response = await fetch(`${API_BASE_URL}/jerarquia/${idNodo}`, {
+    const response = await fetch(`${API_URL}/jerarquia/${idNodo}`, {
         method: 'DELETE',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -116,7 +115,7 @@ export const eliminarNodo = async (idNodo) => {
  * @returns {Promise<Array<Object>>} Lista de tipos de nodo.
  */
 export const obtenerTiposNodo = async () => {
-    const response = await fetch(`${API_BASE_URL}/tipos-nodo`, {
+    const response = await fetch(`${API_URL}/tipos-nodo`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -135,7 +134,7 @@ export const obtenerTiposNodo = async () => {
  * @returns {Promise<Object>} Detalle del tipo de nodo.
  */
 export const obtenerTipoNodoPorId = async (idTipoNodo) => {
-    const response = await fetch(`${API_BASE_URL}/tipos-nodo/${idTipoNodo}`, {
+    const response = await fetch(`${API_URL}/tipos-nodo/${idTipoNodo}`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -154,7 +153,7 @@ export const obtenerTipoNodoPorId = async (idTipoNodo) => {
  * @returns {Promise<Object>} Respuesta del servidor.
  */
 export const crearTipoNodo = async (datosTipoNodo) => {
-    const response = await fetch(`${API_BASE_URL}/tipos-nodo`, {
+    const response = await fetch(`${API_URL}/tipos-nodo`, {
         method: 'POST',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -175,7 +174,7 @@ export const crearTipoNodo = async (datosTipoNodo) => {
  * @returns {Promise<Object>} Respuesta del servidor.
  */
 export const actualizarTipoNodo = async (idTipoNodo, datosTipoNodo) => {
-    const response = await fetch(`${API_BASE_URL}/tipos-nodo/${idTipoNodo}`, {
+    const response = await fetch(`${API_URL}/tipos-nodo/${idTipoNodo}`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -195,7 +194,7 @@ export const actualizarTipoNodo = async (idTipoNodo, datosTipoNodo) => {
  * @returns {Promise<Object>} Respuesta del servidor.
  */
 export const eliminarTipoNodo = async (idTipoNodo) => {
-    const response = await fetch(`${API_BASE_URL}/tipos-nodo/${idTipoNodo}`, {
+    const response = await fetch(`${API_URL}/tipos-nodo/${idTipoNodo}`, {
         method: 'DELETE',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -242,7 +241,7 @@ export const actualizarDetallesNodo = async (idNodo, datosParaActualizar) => {
         return Promise.resolve({ msg: "No se realizaron cambios (sin datos válidos)." });
     }
 
-    const response = await fetch(`${API_BASE_URL}/jerarquia/${idNodo}`, {
+    const response = await fetch(`${API_URL}/jerarquia/${idNodo}`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         credentials: 'include',

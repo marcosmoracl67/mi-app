@@ -1,6 +1,7 @@
 // src/services/detalleNodeService.js
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
+import { API_BASE_URL } from '../config.js';
+const API_URL = `${API_BASE_URL}/api`;
 
 const getAuthHeaders = () => ({
     'Content-Type': 'application/json',
@@ -14,7 +15,7 @@ const getAuthHeaders = () => ({
  * @returns {Promise<Array<Object>>} Array de objetos { NodoDetalleValor_Id, IdNodo, DetalleNodo_Id, Valor, ... }.
  */
 export const getNodoDetailValuesByNodoId = async (idNodo) => {
-    const response = await fetch(`${API_BASE_URL}/nodo-detalle-valores/by-nodo/${idNodo}`, {
+    const response = await fetch(`${API_URL}/nodo-detalle-valores/by-nodo/${idNodo}`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -33,7 +34,7 @@ export const getNodoDetailValuesByNodoId = async (idNodo) => {
  * @returns {Promise<Object>} La respuesta del backend (ej. { msg: ..., valorDetalle: {...} }).
  */
 export const createNodoDetailValue = async (data) => {
-    const response = await fetch(`${API_BASE_URL}/nodo-detalle-valores`, {
+    const response = await fetch(`${API_URL}/nodo-detalle-valores`, {
         method: 'POST',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -53,7 +54,7 @@ export const createNodoDetailValue = async (data) => {
  * @returns {Promise<Object>} La respuesta del backend (ej. { msg: ..., valorDetalle: {...} }).
  */
 export const updateNodoDetailValue = async (id, data) => {
-    const response = await fetch(`${API_BASE_URL}/nodo-detalle-valores/${id}`, {
+    const response = await fetch(`${API_URL}/nodo-detalle-valores/${id}`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -72,7 +73,7 @@ export const updateNodoDetailValue = async (id, data) => {
  * @returns {Promise<Object>} La respuesta del backend.
  */
 export const deleteNodoDetailValue = async (id) => {
-    const response = await fetch(`${API_BASE_URL}/nodo-detalle-valores/${id}`, {
+    const response = await fetch(`${API_URL}/nodo-detalle-valores/${id}`, {
         method: 'DELETE',
         headers: getAuthHeaders(),
         credentials: 'include',

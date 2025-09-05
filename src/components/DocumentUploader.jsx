@@ -12,14 +12,13 @@ import {
   FaEllipsisV
 } from 'react-icons/fa';
 import { MdCloudUpload } from 'react-icons/md';
+import { API_BASE_URL } from '../config.js';
 
 import axios from 'axios';
 import clsx from 'clsx';
 import Tooltip from './Tooltip';
 import DropdownMenu from './DropdownMenu';
 import Modal from './Modal';
-
-const API_BASE_URL = 'http://localhost:3000';
 
 const iconByMimeType = {
   // ... (tus mappings existentes de mime types específicos) ...

@@ -1,6 +1,7 @@
 // src/services/detalleNodeService.js
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
+import { API_BASE_URL } from '../config.js';
+const API_URL = `${API_BASE_URL}/api`;
 
 const getAuthHeaders = () => ({
     'Content-Type': 'application/json',
@@ -12,7 +13,7 @@ const getAuthHeaders = () => ({
  * @returns {Promise<Array<Object>>} Array de definiciones de campos de detalle.
  */
 export const getDetalleFieldsByTipoNodo = async (idTipoNodo) => {
-    const response = await fetch(`${API_BASE_URL}/detalle-nodo/${idTipoNodo}`, {
+    const response = await fetch(`${API_URL}/detalle-nodo/${idTipoNodo}`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include',
@@ -30,7 +31,7 @@ export const getDetalleFieldsByTipoNodo = async (idTipoNodo) => {
  * @returns {Promise<Array<Object>>} Array de opciones de lista ({ descripcion, lista_id }).
  */
 export const getListOptionsByDetalleNodoId = async (detallenodo_id) => {
-    const response = await fetch(`${API_BASE_URL}/listas/by-detallenodo/${detallenodo_id}`, {
+    const response = await fetch(`${API_URL}/listas/by-detallenodo/${detallenodo_id}`, {
         method: 'GET',
         headers: getAuthHeaders(),
         credentials: 'include',
